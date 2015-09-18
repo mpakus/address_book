@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe User, type: :model do
   subject { build(:user) }
 
@@ -25,6 +23,7 @@ RSpec.describe User, type: :model do
 
   describe '#full_name' do
     it 'concatenates first and last names using space' do
+      subject.save
       expect(subject.full_name).to eq "#{subject.first_name} #{subject.last_name}"
     end
   end
