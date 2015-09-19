@@ -1,0 +1,21 @@
+- content_for :title, t('.title')
+
+h1 = t('.title')
+
+- unless users.empty?
+  table
+    tr
+      th = t('.id')
+      th = t('.full_name')
+      th
+      th
+
+    - users.each do |user|
+      tr
+        td = user.id
+        td = link_to user.full_name, user_path(user)
+        td = link_to t('.edit'), edit_user_path(user)
+        td = link_to t('.delete'), user_path(user), method: :delete, data: { confirm: t('.delete_confirm') }
+
+= link_to t('.add'), new_user_path
+

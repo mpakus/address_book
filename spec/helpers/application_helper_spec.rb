@@ -1,0 +1,44 @@
+RSpec.describe ApplicationHelper, type: :helper do
+  describe '.form_errors' do
+    let(:form) { build(:user, first_name: nil, last_name: nil) }
+    subject do
+      form.valid?
+      form_errors(form)
+    end
+
+    it { is_expected.to include 'alert-danger' }
+
+    context 'with fields' do
+      it { is_expected.to include t('activerecord.errors.models.user.attributes.first_name.blank') }
+      it { is_expected.to include t('activerecord.errors.models.user.attributes.last_name.blank') }
+    end
+
+    context 'when parameter is nil' do
+      it 'returns empty string' do
+        expect(form_errors(nil)).to be_empty
+      end
+    end
+
+    context 'when parameter is not nil and not ActiveRecord' do
+      it 'raise error NoMethodError' do
+        expect { form_errors('WRONG_PARAM') }.to raise_error NoMethodError
+      end
+    end
+  end
+
+  describe '.title' do
+    before { @view_flow = ActionView::OutputFlow.new }
+
+    it 'yield title' do
+      text = 'Hello'
+      title(text)
+      expect(helper.content_for(:title)).to eq text
+    end
+
+    it 'strip tags' do
+      text = '<p>Hello <br/>World!</p>'
+      title(text)
+      expect(helper.content_for(:title)).to eq 'Hello World!'
+    end
+  end
+end

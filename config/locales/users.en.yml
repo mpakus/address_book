@@ -1,0 +1,31 @@
+en:
+  users:
+    index:
+      title: Users
+      success: User was successfully created
+      id: ID
+      full_name: Full name
+      edit: Edit
+      delete: Remove
+      delete_confirm: Are you sure?
+      add: + Add user
+    new:
+      title: Add contact
+    edit:
+      title: Edit contact
+    update:
+      success: User was successfully updated
+    destroy:
+      success: User was successfully destroyed
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            first_name:
+              blank: First name can't be blank
+            last_name:
+              blank: Last name can't be blank
+            full_name:
+              blank: Full name can't be blank
