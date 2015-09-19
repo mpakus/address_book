@@ -1,0 +1,18 @@
+h2 = user.full_name
+
+hr
+
+.row
+  .half
+    - unless user.phones.blank?
+      h3 = t('.phones')
+      ul
+      - user.phones.each do |item|
+        li = item.phone
+
+  .half
+    - unless user.emails.blank?
+      h3 = t('.emails')
+      ul
+      - user.emails.each do |item|
+        li = item.email
