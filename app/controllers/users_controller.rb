@@ -40,6 +40,10 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.fetch(:user, {}).permit(:first_name, :last_name)
+    params.fetch(:user, {}).permit(
+      :first_name, :last_name,
+      phones_attributes: [:id, :phone, :_destroy],
+      emails_attributes: [:id, :email, :_destroy]
+    )
   end
 end

@@ -5,6 +5,9 @@ form {
 }
 
 div.field{
+  display: block;
+  margin-bottom: 0.5em;
+
   label {
     font-size: 1em;
     font-weight: bold;
@@ -13,14 +16,22 @@ div.field{
   input[type="text"],
   input[type="password"],
   input[type="email"],
+  input[type="tel"],
+  input[type="submit"],
   select,
-  textarea {
+  textarea, button {
     display: block;
     font-size: 1em;
     padding: 1em;
     text-decoration: none;
     width: 90%;
   }
+}
+
+div.actions{
+  margin-top: 0.5em;
+  border-top: 1px dotted $button_color;
+  padding-top: 0.5em;
 }
 
 button, input[type="submit"]{

@@ -17,7 +17,14 @@ en:
       success: User was successfully updated
     destroy:
       success: User was successfully destroyed
-
+    form:
+      phones: Phones
+      emails: E-mails
+      add: "+ Add"
+    phone_fields:
+      remove: "- Remove"
+    email_fields:
+      remove: "- Remove"
   activerecord:
     errors:
       models:
@@ -29,3 +36,4 @@ en:
               blank: Last name can't be blank
             full_name:
               blank: Full name can't be blank
+              taken: Full name should be uniq

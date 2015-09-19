@@ -1,14 +1,30 @@
 = form_for(user) do |f|
 
   = form_errors(user)
+  .row
+    .user-panel
+      .field
+        = f.label :first_name
+        br
+        = f.text_field :first_name
+      .field
+        = f.label :last_name
+        br
+        = f.text_field :last_name
 
-  div class="field"
-    = f.label :first_name
-    br
-    = f.text_field :first_name
-  div class="field"
-    = f.label :last_name
-    br
-    = f.text_field :last_name
-  div class="actions"
+    .addon-panel
+      h3 = t('.phones')
+      #phones
+        = f.fields_for :phones do |phone|
+          = render 'phone_fields', f: phone
+        .links
+          = link_to_add_association t('.add'), f, :phones
+      hr
+      h3 = t('.emails')
+      #emails
+        = f.fields_for :emails do |email|
+          = render 'email_fields', f: email
+        .links
+          = link_to_add_association t('.add'), f, :emails
+  .actions
     = f.submit

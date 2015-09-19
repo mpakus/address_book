@@ -17,3 +17,16 @@
   height: 100vh;
   min-height: 35em;
 }
+
+.row{
+  clear: both;
+  overflow: hidden;
+}
+.user-panel{
+  width: 60%;
+  float: left;
+}
+.addon-panel{
+  width: 39%;
+  float: left;
+}

@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   has_many :phones
   has_many :emails
 
+  accepts_nested_attributes_for :phones, reject_if: :all_blank, allow_destroy: true
+  accepts_nested_attributes_for :emails, reject_if: :all_blank, allow_destroy: true
+
   private
 
   def set_full_name
