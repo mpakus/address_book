@@ -26,7 +26,6 @@ class UsersController < ApplicationController
 
   def users
     @users ||= User.all
-    @users
   end
   helper_method :users
 

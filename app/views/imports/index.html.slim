@@ -1,0 +1,9 @@
+= form_tag(imports_path, multipart: true) do
+
+  = form_errors(import)
+
+  .field
+    = label_tag 'import_file', t('.csv')
+    = file_field_tag 'import[file]', id: 'import_file', required: 'required'
+  .actions
+    = submit_tag

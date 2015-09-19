@@ -1,0 +1,13 @@
+en:
+  imports:
+    index:
+      csv: Import (*.csv)
+    create:
+      success: Contacts imported
+  activerecord:
+    errors:
+      models:
+        import:
+          attributes:
+            file:
+              blank: File can't be blank
