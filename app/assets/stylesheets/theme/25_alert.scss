@@ -1,0 +1,12 @@
+@import 'variables';
+
+.alert{
+  border-radius: 10px;
+  padding: 0.5em;
+  margin: 0.5em;
+  border: 1px solid $light_color;
+  &.alert-danger{
+    background: $alert_bg;
+    color: $text_on_dark;
+  }
+}

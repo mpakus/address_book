@@ -1,4 +1,5 @@
 en:
   layouts:
     application:
-      copyright: Simple Address Book
+      title: Simple Address Book
+      copyright: Copyleft 2558

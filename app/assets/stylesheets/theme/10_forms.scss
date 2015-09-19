@@ -1,0 +1,32 @@
+@import 'variables';
+
+form {
+  margin: 0 0 1em 0;
+}
+
+div.field{
+  label {
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  select,
+  textarea {
+    display: block;
+    font-size: 1em;
+    padding: 1em;
+    text-decoration: none;
+    width: 90%;
+  }
+}
+
+button, input[type="submit"]{
+  border: none;
+  padding: 1em;
+  margin: 0.5em 0 0.5em 0;
+  background: $button_color;
+  color: $text_on_light;
+}
