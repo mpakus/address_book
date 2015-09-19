@@ -26,6 +26,24 @@ RSpec.describe ApplicationHelper, type: :helper do
     end
   end
 
+  describe '.flash_message' do
+    subject { flash_message(flash) }
+
+    context 'with notice' do
+      let(:flash) { { notice: Faker::Lorem.sentence(5) } }
+
+      it { is_expected.to include flash[:notice] }
+      it { is_expected.to include 'alert-success' }
+    end
+
+    context 'with alert' do
+      let(:flash) { { alert: Faker::Lorem.sentence(5) } }
+
+      it { is_expected.to include flash[:alert] }
+      it { is_expected.to include 'alert-danger' }
+    end
+  end
+
   describe '.title' do
     before { @view_flow = ActionView::OutputFlow.new }
 

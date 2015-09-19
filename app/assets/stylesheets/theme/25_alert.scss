@@ -9,4 +9,8 @@
     background: $alert_bg;
     color: $text_on_dark;
   }
+  &.alert-success{
+    background: $success_bg;
+    color: $text_on_dark;
+  }
 }

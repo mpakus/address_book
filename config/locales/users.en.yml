@@ -2,7 +2,6 @@ en:
   users:
     index:
       title: Users
-      success: User was successfully created
       id: ID
       full_name: Full name
       edit: Edit
@@ -11,6 +10,8 @@ en:
       add: + Add user
     new:
       title: Add contact
+    create:
+      success: User was successfully created
     edit:
       title: Edit contact
     update:
