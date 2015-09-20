@@ -1,15 +1,20 @@
 = t('.subject')
 
-Full name: = @user.full_name
+| Full name:
+=< @user.full_name
+
 | ------------------------------------------------------------------------------------
 
-- unless @user.phones.any?
+- if @user.phones.any?
   | Phones:
   - @user.phones.each do |item|
     = item.phone 
+
 | ------------------------------------------------------------------------------------
 
-- unless @user.emails.any?
+- if @user.emails.any?
   | E-mails:
   - @user.emails.each do |item|
     = item.email
+
+| ------------------------------------------------------------------------------------

@@ -1,0 +1,7 @@
+hr
+h3 = t('.share')
+= form_tag share_user_path(user) do
+  .field.share
+    = text_field_tag :mail_to, '', placeholder: 'user@mail.com'
+  /, required: 'required'
+  = submit_tag t('.share')

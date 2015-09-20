@@ -1,3 +1,5 @@
+- content_for :title, t('.title') + " - #{user.full_name}"
+
 h2 = user.full_name
 
 hr
@@ -16,3 +18,5 @@ hr
       ul
       - user.emails.each do |item|
         li = item.email
+
+= render 'share_form'

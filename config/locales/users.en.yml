@@ -9,15 +9,22 @@ en:
       delete_confirm: Are you sure?
       add: + Add user
     new:
-      title: Add contact
+      title: Add user
     create:
       success: User was successfully created
     edit:
       title: Edit contact
     update:
       success: User was successfully updated
+    show:
+      title: User information
     destroy:
       success: User was successfully destroyed
+    share:
+      fail: Failed to share user contacts
+      success: User contacts shared succefully
+    share_form:
+      share: Share
     form:
       phones: Phones
       emails: E-mails
