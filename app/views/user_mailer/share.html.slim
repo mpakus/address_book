@@ -1,0 +1,20 @@
+h3 = t('.subject')
+
+h1
+  Full name: = @user.full_name
+hr
+
+- unless @user.phones.any?
+  big
+    | Phones:
+  ul
+  - @user.phones.each do |item|
+    li = item.phone
+hr
+
+- unless @user.emails.any?
+  big
+    | E-mails:
+  ul
+  - @user.emails.each do |item|
+    li = item.email

@@ -34,6 +34,7 @@ end
 group :test, :development do
   gem 'awesome_print'
   gem 'byebug'
+  gem 'dotenv-rails'
   gem 'rspec-rails', '~> 3.0'
   gem 'rubocop', require: false
   gem 'spring'

@@ -36,3 +36,6 @@ bower.json
 .idea
 .ruby-gemset
 /public/uploads
+.env.local
+.env.development
+.env.test
