@@ -6,11 +6,11 @@
       .field
         = f.label :first_name
         br
-        = f.text_field :first_name
+        = f.text_field :first_name, required: 'required'
       .field
         = f.label :last_name
         br
-        = f.text_field :last_name
+        = f.text_field :last_name, required: 'required'
 
     .addon-panel
       h3 = t('.phones')

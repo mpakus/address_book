@@ -2,6 +2,8 @@
 
 h2 = t('.title')
 
+p = link_to t('.add'), new_user_path
+
 - unless users.blank?
   table
     tr
@@ -17,5 +19,5 @@ h2 = t('.title')
         td = link_to t('.edit'), edit_user_path(user)
         td = link_to t('.delete'), user_path(user), method: :delete, data: { confirm: t('.delete_confirm') }
 
-= link_to t('.add'), new_user_path
+p = paginate users
 

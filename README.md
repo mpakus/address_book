@@ -34,3 +34,21 @@ APPLICATION_URL = http://domain.com:port
 MAIL_FROM = user@domain.com
 MAIL_SERVER_URL = protocol://user:password@domain:port?domain=domain.com&authentication=plain&starttls_auto=true # as 
 ```
+
+## Setup database
+```
+rake db:create
+rake db:migrate
+rake db:seed
+```
+## Tests & code style
+
+rubocop:
+```
+rubocop -a
+```
+
+specs:
+```
+rspec
+```

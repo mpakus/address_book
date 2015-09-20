@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   private
 
   def users
-    @users ||= User.all
+    @users ||= User.page(params[:page])
   end
   helper_method :users
 

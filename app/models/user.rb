@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :phones, reject_if: :all_blank, allow_destroy: true
   accepts_nested_attributes_for :emails, reject_if: :all_blank, allow_destroy: true
 
+  paginates_per 25
+
   private
 
   def set_full_name

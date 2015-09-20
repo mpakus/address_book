@@ -2,5 +2,5 @@
   .field
     = f.label :phone
     br
-    = f.phone_field :phone
+    = f.phone_field :phone, required: 'required'
   = link_to_remove_association t('.remove'), f

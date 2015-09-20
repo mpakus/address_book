@@ -2,5 +2,5 @@
   .field
     = f.label :email
     br
-    = f.email_field :email
+    = f.email_field :email, required: 'required'
   = link_to_remove_association t('.remove'), f

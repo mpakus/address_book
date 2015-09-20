@@ -10,6 +10,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'carrierwave'
 gem 'cocoon'
+gem 'kaminari'
 gem 'puma',     require: false
 gem 'slim-rails'
 
