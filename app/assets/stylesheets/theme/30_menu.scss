@@ -1,0 +1,20 @@
+@import 'variables';
+
+ul.menu{
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+  li{
+    display: inline-block;
+
+    a{
+      display: inline-block;
+      padding: 1em;
+      background: $text_on_light;
+      color: $text_on_dark;
+    }
+    a:hover{
+      background: $button_color;
+    }
+  }
+}

@@ -8,6 +8,7 @@ html
   body
     header
       h1 = link_to t('.title'), root_path
+      = render 'shared/menu'
 
     == flash_message(flash)
 
