@@ -1,4 +1,4 @@
 ul.menu
   li = link_to t('.users'), users_path
   li = link_to t('.imports'), imports_path
-  li = link_to t('.exports')
+  li = link_to t('.exports'), exports_path, method: :post

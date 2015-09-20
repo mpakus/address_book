@@ -1,8 +1,8 @@
 RSpec.describe 'Imports', type: :request do
-  let(:file){ fixture_file_upload("#{Rails.root}/spec/fixtures/files/contacts.csv") }
-  let(:file_correct){ fixture_file_upload("#{Rails.root}/spec/fixtures/files/contacts_correct.csv") }
+  let(:file) { fixture_file_upload("#{Rails.root}/spec/fixtures/files/contacts.csv") }
+  let(:file_correct) { fixture_file_upload("#{Rails.root}/spec/fixtures/files/contacts_correct.csv") }
 
-  subject{ response }
+  subject { response }
 
   describe 'GET /imports' do
     it 'shows index.html' do

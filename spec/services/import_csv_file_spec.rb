@@ -21,4 +21,3 @@ RSpec.describe ImportCsvFile do
     end
   end
 end
-

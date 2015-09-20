@@ -5,14 +5,12 @@ class ImportCsvFile
     def perform(file)
       errors = []
       i = 0
-      CSV.foreach(file, { col_sep: ';' }) do |row|
+      CSV.foreach(file, col_sep: ';') do |row|
         # First name | Last Name | Phones, | Emails,
         i += 1
         next if i == 1
         err = add_contact(row)
-        unless err.nil?
-          errors << err
-        end
+        errors << err unless err.nil?
       end
       errors
     end
@@ -22,8 +20,8 @@ class ImportCsvFile
     def add_contact(row)
       User.transaction do
         user = User.find_or_create_by!(
-            first_name: row[0],
-            last_name:  row[1]
+          first_name: row[0],
+          last_name:  row[1]
         )
         find_or_create_phones!(row[2], user)
         find_or_create_emails!(row[3], user)
